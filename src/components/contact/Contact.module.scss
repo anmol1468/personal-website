@@ -1,0 +1,110 @@
+@use '../../mixin.scss' as mixin;
+
+.contact {
+  padding: 3rem 3rem;
+
+  @include mixin.respond(seven) {
+    padding: 3rem 1.5rem;
+  }
+  @include mixin.respond(six) {
+    padding: 3rem 0rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+
+    .flex {
+      display: flex;
+      width: 100%;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+
+      @include mixin.respond(eight) {
+        flex-direction: column;
+      }
+
+
+      .illustration {
+        padding: 0 3rem;
+        flex-basis: 50%;
+
+        @include mixin.respond(eight) {
+          flex-basis: 100%;
+        }
+
+        img {
+          width: 100%;
+          min-width: 15rem;
+
+          @include mixin.respond(eight) {
+              width: 50%;
+              min-width: initial;
+              margin: 2rem auto;
+              // display: none;
+            }
+        }
+      }
+
+
+      form {
+      flex-basis: 50%;
+      width: 90%;
+      margin: auto;
+      text-align: left;
+      padding: 0 3rem;
+
+      @include mixin.respond(eight) {
+          width: 100%;
+          margin: auto;
+          text-align: center;
+        }
+
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        border: 2px solid rgb(146, 145, 145);
+        border-radius: 1rem;
+        width: 70%;
+        padding: 0.1rem 0.5rem;
+      }
+
+        textarea {
+        resize: none;
+        border: 2px solid rgb(146, 145, 145);
+        border-radius: 1rem;
+        padding: 0.5rem 0.5rem;
+        width: 70%;
+
+        }
+
+        button {
+          padding: 0.4rem 0.9rem;
+            border-radius: 0.8rem;
+            border: 2px solid transparent;
+            // margin: 0.3rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+            transition: 0.4s all;
+            background-color: #4848B3;
+            color: #fff;
+
+            &:hover {
+                color: #4848B3;
+                // filter: brightness(110%);
+                background-color: #fff;
+                border-color: #4848B3;
+              }
+        }
+      }
+    }
+
+  
+
+}

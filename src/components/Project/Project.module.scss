@@ -1,0 +1,81 @@
+@use '../../mixin.scss' as mixin;
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  padding: 3rem 0;
+
+  @include mixin.respond(seven) {
+    flex-direction: column !important;
+    padding: 0 0 3rem 0;
+  }
+
+  img {
+    width: 65%;
+
+    @include mixin.respond(nine) {width: 75%;}
+    @include mixin.respond(eight) {width: 85%;}
+    // @include mixin.respond(seven) {width: 78%;}
+
+  }
+
+  .info {
+    width: 30%;
+
+    @include mixin.respond(seven) {
+      width: 60%;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+
+    .button {
+      padding: 0.4rem 0.9rem;
+      border-radius: 0.8rem;
+      border: 2px solid transparent;
+      margin: 0.3rem;
+      letter-spacing: 1px;
+      transition: 0.4s all;
+
+      &:hover {
+        color: #4848B3;
+        filter: brightness(110%);
+        border-color: #4848B3;
+      }
+    }
+
+    .button1 {
+      background-color: #4848B3;
+      color: #fff;
+
+      &:hover {
+        color: #4848B3;
+        background-color: #fff;
+      }
+    }
+
+    .button2 {
+      background-color: #fff;
+      border-color: #000;
+      color: #000;
+    }
+
+    
+  }
+
+.phone {
+
+    @include mixin.respond(seven) {
+      display: none;
+    }
+  }
+}

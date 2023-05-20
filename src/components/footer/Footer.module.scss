@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: #4848B3;
+  // background-color: #000;
+  color: #fff;
+
+  .connect {
+    display: flex;
+    align-items: center;
+
+    p {
+      letter-spacing: 1px;
+      margin-right: 0.7rem;
+    }
+
+    svg {
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use '../../mixin.scss' as mixin;
+
+.header {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0rem 4rem;
+  overflow: hidden;   
+
+  @include mixin.respond(seven) {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .intro {
+    color: #fff;
+    font-size: 3rem;
+    text-align: right;
+    font-weight: 700;
+    padding-left: 5rem;
+    // margin-left: auto;
+
+    @include mixin.respond(nine) {
+      padding-left: 2rem;
+    }
+    @include mixin.respond(seven) {
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .illustration {
+    filter: brightness(0.8);
+    object-fit: contain;
+    // transform: scale(0.6);
+    width: 50%;
+    align-items: left;
+    // margin-right: auto;
+
+    @include mixin.respond(seven) {
+        margin: auto;
+        align-items: center;
+        transform: scale(1.2);
+      }
+
+    img {
+      margin: auto;
+      width: 100%;
+
+      @include mixin.respond(seven) {
+          margin: auto;
+        }
+    }
+  }
+}
