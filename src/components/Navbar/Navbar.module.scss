@@ -1,0 +1,104 @@
+@use '../../mixin.scss' as mixin;
+
+.navbar {
+  display: flex;
+  height: 4rem;
+  background-color: #000;
+  position: fixed;
+  padding: 1rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+
+  @include mixin.respond(five) {
+    padding: 2.5rem 2rem;
+  }
+
+  img {
+    height: 3rem;
+  }
+
+  > ul {
+    display: flex;
+
+    @include mixin.respond(five) {
+        display: none;
+      }
+
+    
+    a { 
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.3rem;
+      z-index: 10;
+      letter-spacing: 1px;
+      font-weight: 400;
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+  }
+}
+
+
+  .hamburger {
+    color: #fff;
+    font-size: 2rem;
+    display: none;
+
+    @include mixin.respond(five) {
+      display: block;
+    }
+  }
+
+  .responsiveUl {
+    // display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+
+    ul {
+      width: 60%;
+      position: absolute;
+      background-color: #fff;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      align-items: end;
+      padding: 1.4rem 1rem;
+
+      svg {
+        font-size: 2rem;
+        margin: 0 0.9rem 1rem 0;
+        
+      }
+
+      a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.3rem;
+        z-index: 10;
+        letter-spacing: 1px;
+        font-weight: 400;
+        
+        &:hover {
+          border-bottom: 2px solid #000;
+        }
+      }
+    }
+  }
+}

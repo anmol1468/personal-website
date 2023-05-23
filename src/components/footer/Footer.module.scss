@@ -3,9 +3,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  background: #4848B3;
-  // background-color: #000;
+  // background: #4848B3;
+  background-color: #000;
   color: #fff;
+
+  a {
+    color: #fff;
+  }
 
   .connect {
     display: flex;

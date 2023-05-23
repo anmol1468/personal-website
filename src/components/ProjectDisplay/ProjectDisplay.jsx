@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ProjectDisplay.module.scss'
 import {projects} from '../../data'
 import Project from '../Project/Project'
+import { Outlet, Link } from "react-router-dom";
 
 function ProjectDisplay() {
   return (
@@ -13,7 +14,8 @@ function ProjectDisplay() {
         })
         
       }
-      <button className={`${styles.button} ${styles.button1}`} >See All Projects</button>
+      <Link to={`projects`}><button className={`${styles.button} ${styles.button1}`} >See All Projects</button></Link>
+      
     </div>
   )
 }
