@@ -31,7 +31,7 @@ const Navbar = () => {
           borderColor: location.pathname === '/projects' ? '#fff': 'transparent'
         }}
         >Projects</Link>
-        <Link 
+        <Link to={`/contact`}
         style={{
           borderColor: location.pathname === '/contact' ? '#fff': 'transparent'
         }}
@@ -47,7 +47,7 @@ const Navbar = () => {
       }}
       >
       
-      <ul>
+      <ul className={`${styles.links} ${showSideMenu? styles.show: styles.hide}`}>
         <RxCross2 onClick={toggleSideMenu} ></RxCross2>
         <Link to={`/`}
         style={{
@@ -59,7 +59,7 @@ const Navbar = () => {
           borderColor: location.pathname === '/projects' ? '#fff': 'transparent'
         }}
         >Projects</Link>
-        <Link 
+        <Link to={`/contact`}
         style={{
           borderColor: location.pathname === '/contact' ? '#fff': 'transparent'
         }}

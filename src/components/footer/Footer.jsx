@@ -11,7 +11,7 @@ function Footer() {
       <BsLinkedin />
       </div>
       <div className={styles.code}>
-        Check out code for this website <a href="#">here</a>
+        Check out code for this website <a href="https://github.com/anmol1468/personal-website" target='_blank' >here</a>
       </div>
     </div>
   )

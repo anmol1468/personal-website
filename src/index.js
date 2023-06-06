@@ -8,6 +8,7 @@ import {
 
 import ProjectsPage from './pages/projectsPage/ProjectsPage';
 import App from './App';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "projects",
     element: <ProjectsPage />
+  },
+  {
+    path: "contact",
+    element: <ContactPage />
   }
 ]);
 
