@@ -7,13 +7,17 @@
   align-items: center;
   padding: 3rem 0;
 
+  > div {
+    flex-basis: 33%;
+  }
+
   @include mixin.respond(seven) {
     flex-direction: column !important;
-    padding: 0 0 3rem 0;
+    padding: 3rem 0;
   }
 
   img {
-    width: 65%;
+    width: 85%;
 
     @include mixin.respond(nine) {width: 75%;}
     @include mixin.respond(eight) {width: 85%;}
@@ -26,6 +30,7 @@
 
     @include mixin.respond(seven) {
       width: 60%;
+      margin-top: 1rem;
     }
 
     h3 {
@@ -36,6 +41,7 @@
     p {
       letter-spacing: 1px;
       line-height: 1.3;
+      margin: 0.5rem 0;
     }
 
     .button {
@@ -73,6 +79,11 @@
   }
 
 .phone {
+   
+
+  img {
+    width: 40%;
+  }
 
     @include mixin.respond(seven) {
       display: none;

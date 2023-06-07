@@ -4,13 +4,13 @@ import {projects} from '../../data'
 import Project from '../Project/Project'
 import { Link } from "react-router-dom";
 
-function ProjectDisplay() {
+function ProjectDisplay({scrollRef}) {
 
   const highlightedProjects = projects.slice(0, 2)
 
   return (
-    <div className={styles.projectDisplay}>
-      <h2>My Projects</h2>
+    <div  className={styles.projectDisplay}>
+      <h2 ref={scrollRef} >My Projects</h2>
       {
         highlightedProjects.map((project) => {
           return <Project name={project.name} description={project.description} phone={project.phone} desktop={project.desktop} index={project.index} key={project.index} code={project.github} website={project.site} />
