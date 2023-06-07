@@ -1,3 +1,5 @@
+@use '../../mixin.scss' as mixin;
+
 .footer {
   display: flex;
   align-items: center;
@@ -6,6 +8,14 @@
   // background: #4848B3;
   background-color: #000;
   color: #fff;
+
+  @include mixin.respond(five) {
+    flex-direction: column;
+
+    > div {
+      margin: 0.3rem auto;
+    }
+  }
 
   a {
     color: #fff;

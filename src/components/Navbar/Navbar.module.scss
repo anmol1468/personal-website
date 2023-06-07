@@ -58,14 +58,16 @@
 
   .responsiveUl {
     background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     top: 0;
     right: 0;
+    z-index: 999;
 
     .links {
       width: 60%;
+      z-index: 999;
       position: absolute;
       background-color: #fff;
       top: 0;
