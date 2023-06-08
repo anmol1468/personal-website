@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar}>
-      <img src={logo} alt='A D' />
+      <Link to={`/`}><img src={logo} alt='A D' /></Link>
       <ul>
         <Link to={`/`}
         style={{
