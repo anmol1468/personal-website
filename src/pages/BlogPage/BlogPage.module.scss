@@ -1,8 +1,14 @@
+@use "../../mixin.scss" as mixin;
+
 .postBox {
   display: flex;
   padding: 4rem 6rem 0 6rem;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include mixin.respond(seven) {
+    flex-direction: column;
+  }
 
   a {
     text-decoration: none;
@@ -21,6 +27,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include mixin.respond(seven) {
+      width: 100%;
+    }
 
     img {
       max-height: 10rem;
