@@ -1,0 +1,29 @@
+.postBox {
+  display: flex;
+  padding: 4rem 6rem 0 6rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all;
+
+    &:hover {
+      color: #4848b3;
+    }
+  }
+
+  .post {
+    width: 25%;
+    margin-bottom: 5rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      max-height: 10rem;
+    }
+  }
+}

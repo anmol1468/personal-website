@@ -1,0 +1,44 @@
+@use "../../mixin.scss" as mixin;
+
+.post {
+  text-align: center;
+  padding: 0 3rem;
+
+  @include mixin.respond(five) {
+    padding: 2.5rem 2rem;
+  }
+
+  a.back {
+    display: block;
+    text-decoration: none;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  img {
+    max-width: 60rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    display: block;
+    margin: 0.7rem 0;
+  }
+
+  > p {
+    margin-bottom: 0.7rem;
+  }
+
+  .content {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-align: left;
+
+    strong {
+      margin-top: 1rem;
+    }
+  }
+}
